@@ -13,7 +13,7 @@ public class test //prints end balance. pelet: loan,  rate,  n,  payment.
 
 		iterationCounter = 0;
 
-		while(endB >= 0)
+		while(endB > 0)
 		{
 			endB = endBalance(loanB, rateB, nB, g);
 			g += epsilonB;

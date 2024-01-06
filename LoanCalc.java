@@ -38,9 +38,9 @@ public class LoanCalc
 
 		double endB = 0;
 
-		//iterationCounter = 0;
+		iterationCounter = 0;
 
-		while(endB > 0)
+		while(endB >= 0)
 		{
 			endB = endBalance(loanB, rateB, nB, g);
 			g += epsilonB;
@@ -61,7 +61,7 @@ public class LoanCalc
 		double h = loanB + 1; //<0
 		double g = (l+h)/2;
 
-		//iterationCounter = 0;
+		iterationCounter = 0;
 
 		while((h - l) > epsilonB)
 		{
@@ -85,7 +85,7 @@ public class LoanCalc
 	{
 		double loanE = loan;
     	double rateE = rate;
-    	double nE = n;
+    	int nE = n;
     	double paymentE = payment;
 
 		for(int i = 0; i < nE; i++)

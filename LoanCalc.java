@@ -46,7 +46,7 @@ public class LoanCalc
 			endB = endBalance(loanB, rateB, nB, g);
 			g += epsilonB;
 		}
-
+		iterationCounter--;
 		return g;
 	}
     

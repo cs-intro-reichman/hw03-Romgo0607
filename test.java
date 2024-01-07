@@ -1,5 +1,5 @@
 public class test 
-{ //deleting letters from given drting if its more then once
+{ //deleting letters from given string if its more then once
 	public static void main(String[] args) 
 	{
         String str = args[0]; //abbab

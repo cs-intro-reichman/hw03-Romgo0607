@@ -1,43 +1,21 @@
 public class test 
-{
+{ //deleting letters from given drting if its more then once
 	public static void main(String[] args) 
 	{
-		String s1 = "Hi ByE";
-        String s2 = "";
+        String str = args[0]; //abbab
+        str += " ";
+        String s = "";
+        int count = 0;
+        int i=0;
 
-        for(int i = 0; i < s1.length(); i++) 
+        while(i < str.length()-1)
         {
-            char letter = s1.charAt(i); 
-
-            if((letter <= 'Z') && (letter >= 'A'))
+            if(str.charAt(i) != str.charAt(i+1))
             {
-                s2 = s2 + (char)(s1.charAt(i) + 32); 
+                s+=(char)(str.charAt(i));
             }
-            else
-            {
-                s2 = s2 + letter;
-            }
+            i++;
         }
-        System.out.print(s2);
-
-
-
-		/*String s1 = "I love FOOD yeaH";
-		String s2 = "";
-
-		for(int i = 0; i < s1.length(); i++) 
-        {
-            char letter = s1.charAt(i); 
-
-            if((letter <= 'Z') && (letter >= 'A'))
-            {
-                s2 = s2 + (char)(s1.charAt(i) + 32); 
-            }
-            else
-            {
-            	s2 = s2 + letter;
-            }
-        }
-        System.out.print(s2);*/
+        System.out.println(s);
 	}
 }

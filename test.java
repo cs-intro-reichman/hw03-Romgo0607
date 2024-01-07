@@ -1,21 +1,19 @@
 public class test 
-{ //deleting letters from given string if its more then once
+{ //deleting letters from given sring if its more then once
 	public static void main(String[] args) 
 	{
-        String str = args[0]; //abbab
-        str += " ";
-        String s = "";
-        int count = 0;
-        int i=0;
+        String str = "checkh";
+        String strNew = "";
 
-        while(i < str.length()-1)
+        for(int i =0; i<str.length(); i++)
         {
-            if(str.charAt(i) != str.charAt(i+1))
+            char ch = str.charAt(i);
+            if(strNew.indexOf(ch) == -1)
             {
-                s+=(char)(str.charAt(i));
+                strNew += ch;
             }
-            i++;
         }
-        System.out.println(s);
+        System.out.print(strNew);
+        
 	}
 }

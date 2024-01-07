@@ -30,8 +30,7 @@ public class Calendar0 {
 	{
 		int yearCheck = year;
 		boolean isLeapYear;
-		isLeapYear = ((yearCheck % 400) == 0);
-		isLeapYear = isLeapYear || (((yearCheck % 4) == 0) && ((yearCheck % 100) != 0)));
+		isLeapYear = (((yearCheck % 400) == 0) || (((yearCheck % 4) == 0) && ((yearCheck % 100) != 0)));
 		return isLeapYear;
 	}
 	 

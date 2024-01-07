@@ -36,17 +36,16 @@ public class LoanCalc
 		double epsilonB = epsilon;
 		double g = loanB / nB;
 
-		double endB = 0;
+		//double endB = endBalance(loanB, rateB, nB, g);
 
 		iterationCounter = 0;
 
-		while(endB >= 0)
+		while(endBalance(loanB, rateB, nB, g) >= 0)
 		{
 			iterationCounter++;
-			endB = endBalance(loanB, rateB, nB, g);
 			g += epsilonB;
+			endBalance(loanB, rateB, nB, g);
 		}
-		iterationCounter--;
 		return g;
 	}
     

@@ -42,11 +42,10 @@ public class LoanCalc
 
 		while(endB >= 0)
 		{
+			iterationCounter++;
 			endB = endBalance(loanB, rateB, nB, g);
 			g += epsilonB;
-			iterationCounter++;
 		}
-		iterationCounter--;
 
 		return g;
 	}

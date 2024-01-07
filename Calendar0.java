@@ -26,9 +26,13 @@ public class Calendar0 {
 	}
 
 	// Returns true if the given year is a leap year, false otherwise.
-	public static boolean isLeapYear(int year) {
-	    // Replace the following statement with your code
-		return false;
+	public static boolean isLeapYear(int year) 
+	{
+		int yearCheck = year;
+		boolean isLeapYear;
+		isLeapYear = ((yearCheck % 400) == 0);
+		isLeapYear = isLeapYear || (((yearCheck % 4) == 0) && ((yearCheck % 100) != 0)));
+		return isLeapYear;
 	}
 	 
 	// Returns the number of days in the given month and year.

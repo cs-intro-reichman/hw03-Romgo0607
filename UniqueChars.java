@@ -14,7 +14,7 @@ public class UniqueChars {
     {
         String str = s;
         str += " ";
-        String s = "";
+        String sNew = "";
         int count = 0;
         int i=0;
 
@@ -22,10 +22,10 @@ public class UniqueChars {
         {
             if(str.charAt(i) != str.charAt(i+1))
             {
-                s+=(char)(str.charAt(i));
+                sNew += (char)(str.charAt(i));
             }
             i++;
         }
-    return s;
+    return sNew;
     }
 }

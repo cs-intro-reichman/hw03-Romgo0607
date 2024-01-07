@@ -1,15 +1,12 @@
 /** String processing exercise 1. */
 public class LowerCase {
-    public static void main(String[] args) {  
-        String str = args[0];
+    public static void main(String[] args) 
+    {  
+        String str = args[0]; //the only problem is that when Im making space char: ' ',
+                              //its a diffirent arg so it wont count.
         System.out.println(lowerCase(str));
     }
 
-   /**
-    * Returns a string which is identical to the original string, 
-    * except that all the upper-case letters are converted to lower-case letters.
-    * Non-letter characters are left as is.
-    */
     public static String lowerCase(String s) 
     {
         String s1 = s; 

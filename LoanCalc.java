@@ -46,6 +46,7 @@ public class LoanCalc
 			g += epsilonB;
 			iterationCounter++;
 		}
+		iterationCounter--;
 
 		return g;
 	}

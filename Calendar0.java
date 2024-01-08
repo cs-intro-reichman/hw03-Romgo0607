@@ -53,10 +53,10 @@ public class Calendar0 {
 		int monthCheck = month;
 		int result;
 
-		result = 29;
+		result = 28;
 		if((isLeapYear(yearCheck)) && (monthCheck == 2))
 		{
-				result = 28;
+				result = 29;
 		}
 		else
 		{

@@ -20,6 +20,10 @@ public class UniqueChars
             {
                 sNew += ch;
             }
+            else if(ch == ' ')
+                {
+                    sNew += " ";
+                }
         }   
         return sNew; 
     }

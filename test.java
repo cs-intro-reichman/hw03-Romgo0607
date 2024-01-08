@@ -12,6 +12,7 @@ public class test
             {
                 strNew += ch;
             }
+            e
         }
         System.out.print(strNew);
         

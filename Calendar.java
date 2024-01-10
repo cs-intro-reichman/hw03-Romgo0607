@@ -18,8 +18,6 @@ public class Calendar
 		
 	 	while (year <= selectYear) 
 		{
-		advance();
-        
         if(year == selectYear)
             {
                 if((dayOfWeek == dayOfMonth) && (dayOfMonth == 1))
@@ -31,6 +29,7 @@ public class Calendar
 				    System.out.println(dayOfMonth + "/" + month + "/" + year);
 			    }
             }
+        advance();
         }
 	}
 	

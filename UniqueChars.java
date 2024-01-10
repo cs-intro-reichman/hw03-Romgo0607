@@ -4,19 +4,13 @@ public class UniqueChars {
         String str = args[0];
         System.out.println(uniqueChars(str));
     }
-    public static String uniqueChars(String str) 
-    { 
+    public static String uniqueChars(String str) { 
         String sNew = "";
-
-        for(int i = 0; i < str.length(); i++)
-        {
+        for(int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if(sNew.indexOf(ch) == -1)
-            {
+            if(sNew.indexOf(ch) == -1) {
                 sNew += ch;
-            }
-            else if(ch == ' ')
-                {
+            } else if(ch == ' ') {
                     sNew += " ";
                 }
         }   

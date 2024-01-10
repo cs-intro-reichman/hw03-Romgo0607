@@ -25,14 +25,8 @@ public class LoanCalc {
 		System.out.println("number of iterations: " + iterationCounter);
 	}
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) { //hhh
-    	//double loanB = loan;
-		//double rateB = rate;
-		//int nB = n;
-		//double epsilonB = epsilon;
-		//double g = loanB / nB;
 		double g = loan / n;
 		iterationCounter = 0;
-
 		while (endBalance(loan, rate, n, g) >= 0) {
 			iterationCounter++;
 			g += epsilon;
@@ -40,33 +34,18 @@ public class LoanCalc {
 		}
 		return g;
 	}
-    
-    public static double bisectionSolver(double loan, double rate, int n, double epsilon) 
-    {  
-    	double loanB = loan;
-		double rateB = rate;
-		int nB = n;
-		double epsilonB = epsilon;
-
-		double l = loanB / nB; //>0
-		double h = loanB + 1; //<0
+    public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
+		double l = loan / n; //>0
+		double h = loan + 1; //<0
 		double g = (l+h)/2;
-
 		iterationCounter = 0;
-
-		while((h - l) > epsilonB)
-		{
-			if(endBalance(loanB, rateB, nB, g) >= 0)
-			{
+		while ((h - l) > epsilon) {
+			if (endBalance(loanB, rateB, nB, g) >= 0) {
 				l = g;
-			}
-			else
-			{
+			} else {
 				h = g;
 			}
-
 			g = (l+h)/2;
-
 			iterationCounter++;
 		}
 		return g;

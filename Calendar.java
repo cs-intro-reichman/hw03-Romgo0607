@@ -20,7 +20,7 @@ public class Calendar
 		{
         if(year == selectYear)
             {
-                if((dayOfWeek == dayOfMonth) && (dayOfMonth == 1))
+                if(dayOfWeek == 1)
 			    {
 				    System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
 			    }

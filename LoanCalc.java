@@ -1,14 +1,11 @@
 /**
 * Computes the periodical payment necessary to re-pay a given loan.
 */
-public class LoanCalc 
-{
-	
+public class LoanCalc {
 	static double epsilon = 0.001;  // The computation tolerance (estimation error)
 	static int iterationCounter;    // Monitors the efficiency of the calculation
 	
-	public static void main(String[] args) 
-	{		
+	public static void main(String[] args) {		
 		// Gets the loan data
 		double loan = Double.parseDouble(args[0]);
 		double rate = Double.parseDouble(args[1]);
@@ -27,20 +24,16 @@ public class LoanCalc
 		System.out.println();
 		System.out.println("number of iterations: " + iterationCounter);
 	}
-	
-    public static double bruteForceSolver(double loan, double rate, int n, double epsilon) 
-    {  
-    	double loanB = loan;
-		double rateB = rate;
-		int nB = n;
-		double epsilonB = epsilon;
-		double g = loanB / nB;
-
-		//double endB = endBalance(loanB, rateB, nB, g);
-
+    public static double bruteForceSolver(double loan, double rate, int n, double epsilon) { //hhh
+    	//double loanB = loan;
+		//double rateB = rate;
+		//int nB = n;
+		//double epsilonB = epsilon;
+		//double g = loanB / nB;
+		double g = loan / n;
 		iterationCounter = 0;
 
-		while(endBalance(loanB, rateB, nB, g) >= 0)
+		while (endBalance(loanB, rateB, nB, g) >= 0)
 		{
 			iterationCounter++;
 			g += epsilonB;

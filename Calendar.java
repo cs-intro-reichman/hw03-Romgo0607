@@ -16,25 +16,23 @@ public class Calendar
 	    //int debugDaysCounter = 0; 
 		//int sundayCounter = 0;
 		
-	 	while (year < selectYear) 
+	 	while (year <= selectYear) 
 		{
-			advance();
-	 		//debugDaysCounter++;
+		advance();
+        
+        if(year == selectYear)
+            {
+                if((dayOfWeek == dayOfMonth) && (dayOfMonth == 1))
+			    {
+				    System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
+			    }
+			    else
+			    {
+				    System.out.println(dayOfMonth + "/" + month + "/" + year);
+			    }
+            }
         }
-        while(year == selectYear)
-        {
-            if((dayOfWeek == dayOfMonth) && (dayOfMonth ==1))
-			{
-				System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
-				//sundayCounter++;
-			}
-			else
-			{
-				System.out.println(dayOfMonth + "/" + month + "/" + year);
-			}
-            advance();
-        }
-	 }
+	}
 	
 	 // Advances the date (day, month, year) and the day-of-the-week.
 	 // If the month changes, sets the number of days in this month.

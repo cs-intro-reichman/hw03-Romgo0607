@@ -43,7 +43,6 @@ public class Calendar1
 	 		}*/
         }
 		System.out.println("During the 20th century, " + sundayCounter + " Sundays fell on the first day of the month");
-	 	//// Write the necessary ending code here
 	 }
 	
 	 // Advances the date (day, month, year) and the day-of-the-week.

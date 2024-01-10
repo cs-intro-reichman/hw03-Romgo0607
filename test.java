@@ -9,7 +9,7 @@ public class test
 	    int nDaysInMonth = 31;
         while(year == 1900)
         {
-            if(dayOfWeek < 7) //adds days to the week yntil its the 7st day
+        if(dayOfWeek < 7) //adds days to the week yntil its the 7st day
         {
             dayOfWeek++;
         }

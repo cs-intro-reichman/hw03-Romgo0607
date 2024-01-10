@@ -19,25 +19,37 @@ public class Calendar1
 	    // Prints each date dd/mm/yyyy in a separate line. If the day is a Sunday, prints "Sunday".
 	    // The following variable, used for debugging purposes, counts how many days were advanced so far.
 	    int debugDaysCounter = 0; 
+		int sundayCounter = 0;
+		
 	    //// Write the necessary initialization code, and replace the condition
 	    //// of the while loop with the necessary condition 
-	 	while (true) {
-	 		//// Write the body of the while 		
-	 		advance(dayOfWeek, month, year, nDaysInMonth, dayOfMonth);
+	 	while (year <= 1999) 
+		{
+			advance();
+			if((dayOfWeek == dayOfMonth) && (dayOfMonth ==1))
+			{
+				System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
+				sundayCounter++;
+			}
+			else
+			{
+				System.out.println(dayOfMonth + "/" + month + "/" + year);
+			}
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the
 	 		//// if statement with the condition (debugDaysCounter == n)
-	 		if (false) { 
+	 		/*if (debugDaysCounter == nDays) {  
 	 			break;
-	 		}
+	 		}*/
         }
+		System.out.println("During the 20th century, " + sundayCounter + " Sundays fell on the first day of the month");
 	 	//// Write the necessary ending code here
 	 }
 	
 	 // Advances the date (day, month, year) and the day-of-the-week.
 	 // If the month changes, sets the number of days in this month.
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
-	 private static void advance(int dayOfWeek, int month, int year, int nDaysInMonth, int dayOfMonth) 
+	 private static void advance() 
 	 {
 		if(dayOfWeek < 7) //adds days to the week yntil its the 7st day
         {
@@ -57,17 +69,11 @@ public class Calendar1
 			month++;
 			dayOfMonth = 1;
 		}
-		if(month == 12) //when its the last month of the year - adds year.
+		if(month == 13) //when its the last month of the year - adds year.
         {
            month = 1;
 		   year++;
-        }
-		System.out.println(dayOfMonth + "/" + month + "/" + year); //if its the first day of the month and the week - print sunday
-
-		if((dayOfWeek = 1) && (dayOfMonth = 1)) //why its not working???
-		{
-			System.out.print("Sunday");
-		}
+        }	
 	 } 
 		 
     // Returns true if the given year is a leap year, false otherwise.

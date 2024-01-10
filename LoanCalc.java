@@ -33,11 +33,10 @@ public class LoanCalc {
 		double g = loan / n;
 		iterationCounter = 0;
 
-		while (endBalance(loanB, rateB, nB, g) >= 0)
-		{
+		while (endBalance(loan, rate, n, g) >= 0) {
 			iterationCounter++;
-			g += epsilonB;
-			endBalance(loanB, rateB, nB, g);
+			g += epsilon;
+			endBalance(loan, rate, n, g);
 		}
 		return g;
 	}

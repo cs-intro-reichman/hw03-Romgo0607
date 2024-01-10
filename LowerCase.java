@@ -1,27 +1,17 @@
 /** String processing exercise 1. */
 public class LowerCase {
-    public static void main(String[] args) 
-    {  
-        String str = args[0]; //the only problem is that when Im making space char: ' ',
-                              //its a diffirent arg so it wont count.
+    public static void main(String[] args) {  
+        String str = args[0];
         System.out.println(lowerCase(str));
     }
-
-    public static String lowerCase(String s) 
-    {
+    public static String lowerCase(String s) {
         String s1 = s; 
         String s2 = "";
-
-        for(int i = 0; i < s1.length(); i++) 
-        {
+        for(int i = 0; i < s1.length(); i++) {
             char letter = s1.charAt(i); 
-
-            if((letter <= 'Z') && (letter >= 'A'))
-            {
+            if((letter <= 'Z') && (letter >= 'A')) {
                 s2 = s2 + (char)(s1.charAt(i) + 32); 
-            }
-            else
-            {
+            } else {
                 s2 = s2 + letter;
             }
         }

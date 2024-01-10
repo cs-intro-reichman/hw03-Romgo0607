@@ -24,7 +24,7 @@ public class LoanCalc {
 		System.out.println();
 		System.out.println("number of iterations: " + iterationCounter);
 	}
-    public static double bruteForceSolver(double loan, double rate, int n, double epsilon) { //hhh
+    public static double bruteForceSolver(double loan, double rate, int n, double epsilon) { //computes ending balance of an n-period loan in bruteForce
 		double g = loan / n;
 		iterationCounter = 0;
 		while (endBalance(loan, rate, n, g) >= 0) {
@@ -34,13 +34,13 @@ public class LoanCalc {
 		}
 		return g;
 	}
-    public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
+    public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  //computes ending balance of an n-period loan in biSection
 		double l = loan / n; //>0
 		double h = loan + 1; //<0
 		double g = (l+h)/2;
 
 		iterationCounter = 0;
-		
+
 		while ((h - l) > epsilon) {
 			if (endBalance(loan, rate, n, g) >= 0) {
 				l = g;
@@ -52,7 +52,6 @@ public class LoanCalc {
 		}
 		return g;
     }
-	
 	private static double endBalance(double loan, double rate, int n, double payment) {
 		for (int i = 0; i < n; i++) {
 			loan = (loan - payment) * (1 + (rate / 100));

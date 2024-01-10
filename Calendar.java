@@ -23,7 +23,6 @@ public class Calendar
         }
         while(year == selectYear)
         {
-            advance();
             if((dayOfWeek == dayOfMonth) && (dayOfMonth ==1))
 			{
 				System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
@@ -33,6 +32,7 @@ public class Calendar
 			{
 				System.out.println(dayOfMonth + "/" + month + "/" + year);
 			}
+            advance();
         }
 	 }
 	

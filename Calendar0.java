@@ -37,6 +37,8 @@ public class Calendar0 {
 	// Returns true if the given year is a leap year, false otherwise.
 	public static boolean isLeapYear(int year) 
 	{
+		// #feedback - by using year directly, this function can be a single line -
+		// return (((year % 400) == 0) || (((year % 4) == 0) && ((year % 100) != 0)));
 		int yearCheck = year;
 		boolean isLeapYear = false;
 		isLeapYear = (((yearCheck % 400) == 0) || (((yearCheck % 4) == 0) && ((yearCheck % 100) != 0)));
@@ -53,7 +55,7 @@ public class Calendar0 {
 		int monthCheck = month;
 		int result;
 
-		result = 28;
+		result = 28; // #feedback - it would be shorter to have the default value 31 since it is the result for most of the months.
 		if((isLeapYear(yearCheck)) && (monthCheck == 2))
 		{
 				result = 29;

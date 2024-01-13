@@ -5,7 +5,7 @@ public class LowerCase {
         System.out.println(lowerCase(str));
     }
     public static String lowerCase(String s) {
-        String s1 = s; 
+        String s1 = s; // #feedback - this variable is not needed, you can use s directly.
         String s2 = "";
         for(int i = 0; i < s1.length(); i++) {
             char letter = s1.charAt(i); 

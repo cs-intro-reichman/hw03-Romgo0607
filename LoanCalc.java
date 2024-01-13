@@ -30,7 +30,7 @@ public class LoanCalc {
 		while (endBalance(loan, rate, n, g) >= 0) {
 			iterationCounter++;
 			g += epsilon;
-			endBalance(loan, rate, n, g);
+			endBalance(loan, rate, n, g); // #feedback - this call for the endBalance function is redundant.
 		}
 		return g;
 	}
